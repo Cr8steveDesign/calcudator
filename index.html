@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalcuDator - Know age full details!</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+  </head>
+  <body>
+    <!--  -->
+    <!--  -->
+    <main>
+      <nav class="nav-container">
+        <h1 class="nav-title">📅 CalcuDator</h1>
+        <div class="nav-links">
+          <!-- <a href="#">Profile</a> -->
+          <a href="#" title="This App was created by @Cr8SteveDesign">About</a>
+        </div>
+      </nav>
+
+      <section class="content">
+        <h1 class="content-headline">
+          Enter Your Date of Birth To Get full details of your current age!
+        </h1>
+        <form>
+          <label for="day">Day</label
+          ><input
+            id="day"
+            type="number"
+            placeholder="Day: e.g 5 for 5th"
+            min="1"
+            max="31"
+            required
+            title="Enter day here: 1st to 31st"
+          />
+          <label for="month">Month</label>
+          <input
+            id="month"
+            type="number"
+            placeholder="Month: e.g 6 for June"
+            min="1"
+            max="12"
+            required
+            title="Enter Month here: 1 to 12"
+          />
+
+          <label for="year">Year</label>
+          <input
+            id="year"
+            type="number"
+            placeholder="e.g 1995"
+            minlength="4"
+            maxlength="4"
+            required
+          />
+
+          <input
+            type="button"
+            id="submit"
+            value="Calculate Now!"
+            onclick="handleSubmit()"
+          />
+        </form>
+
+        <!--Computed Age Display-->
+        <div class="review-overlay hidden">
+          <section class="review-container">
+            <p class="subtext">Your current age is:</p>
+            <p id="dateyears">29yrs</p>
+            <div class="subdetails">
+              <p id="datemonths">2 months</p>
+              <p id="datedays">22 days</p>
+            </div>
+
+            <p class="summary">
+              You were born on a <span id="daytype">Tuesday</span>
+            </p>
+
+            <input type="button" value="Close" onclick="closeModal()" />
+          </section>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          &copy; Designed and Developed by
+          <b>Cr8Steve Designs. @Cr8SteveDesign</b>
+        </p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
