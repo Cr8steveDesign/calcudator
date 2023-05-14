@@ -57,10 +57,39 @@ function handleSubmit() {
   const minutes = Math.floor(seconds / 60);
   const hours = Math.floor(minutes / 60);
   const days = Math.floor(hours / 24);
-  const years = Math.floor(days / 365);
+
+  //Accounting for leap years
+  let years, months;
+
+  if (+year % 4 === 0) {
+     years = Math.floor(days / 366);
+  } else {
+     years = Math.floor(days / 365);
+  };
+
+
+  //Accounting for 30 Days, 31 Days and February 28
+
+  if (+month === 9 || +month === 4 || +month === 6 || +month === 11){
+
+    if (+year % 4 === 0) {
+       months = Math.floor((days % 366) / 30);
+    } else {
+       months = Math.floor((days % 365) / 30);
+    };
+  } else if (+month === 2){
+    if (+year % 4 === 0) {
+       months = Math.floor((days % 366) / 29);
+    } else {
+       months = Math.floor((days % 365) / 28);
+    };
+  } else {
+       months = Math.floor((days % 365) / 31);
+
+  }
+
 
   // Calculate remaining months and days
-  const months = Math.floor((days % 365) / 30);
   const remainingDays = Math.floor((days % 365) % 30);
 
   //Populate Data
