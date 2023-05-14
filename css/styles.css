@@ -72,6 +72,7 @@ main {
 /* Content start here */
 .content {
   background-color: goldenrod;
+  background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
   width: 100%;
   padding: 2rem;
   display: flex;
@@ -80,6 +81,7 @@ main {
   position: relative;
   overflow-x: hidden;
 }
+
 .content-headline {
   font-family: Unbounded;
   max-width: 25rem;
@@ -121,6 +123,12 @@ input:out-of-range {
 
 input:last-of-type {
   background-color: var(--choco);
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
   font-family: Unbounded;
   margin-top: 1.5rem;
   font-size: 1.2rem;
@@ -132,8 +140,15 @@ input:last-of-type {
 
 input:last-of-type:hover {
   background-color: rgb(92, 4, 30);
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
   transform: none;
-  color: rgb(194, 126, 0);
+  transform: scale(0.95);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 form > input:hover {
@@ -261,7 +276,7 @@ footer {
 
   .content-headline {
     max-width: 25rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   form {
@@ -277,6 +292,11 @@ footer {
 }
 
 @media (max-width: 370px) {
+  .content-headline {
+    max-width: 25rem;
+    font-size: 1.3rem;
+  }
+
   form > input::placeholder {
     font-size: 1rem;
   }
