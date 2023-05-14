@@ -37,11 +37,7 @@ function handleDay(e) {
 function handleSubmit() {
   //const stringDate = new Date("2022-05-13");
 
-  if (
-    (!day > 0 && !month > 0 && !year > 1900) ||
-    !year < 2023 ||
-    typeof year !== "number"
-  ) {
+  if (!day.length > 0 || !month.length > 0 || !year.length > 0) {
     alert("Check data entered! ❌");
     return;
   }

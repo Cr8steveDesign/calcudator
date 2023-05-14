@@ -289,6 +289,10 @@ footer {
   form > input:last-of-type {
     font-size: 1rem;
   }
+
+  .review-container {
+    width: 80%;
+  }
 }
 
 @media (max-width: 370px) {
@@ -298,6 +302,19 @@ footer {
   }
 
   form > input::placeholder {
+    font-size: 1rem;
+  }
+
+  .review-container {
+    width: 90vw;
+  }
+
+  #dateyears {
+    font-size: 3rem;
+    line-height: 100%;
+  }
+
+  .subdetails {
     font-size: 1rem;
   }
 
